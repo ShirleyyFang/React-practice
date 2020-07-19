@@ -1,6 +1,7 @@
 //Yanbing Fang July 16th
-import React from 'react'
-import { render } from '@testing-library/react';
+import React from 'react';
+import propTypes from 'prop-types';
+
 
 class TodoItem extends React.Component{
 
@@ -18,5 +19,10 @@ class TodoItem extends React.Component{
         //子组件如何调用父组件的方法修改父组件的内容
         this.props.deleteItem(index)
     }
+}
+TodoItem.propTypes ={
+    content:propTypes.string,
+    deleteItem:propTypes.func,
+    index:propTypes.number
 }
 export default TodoItem;

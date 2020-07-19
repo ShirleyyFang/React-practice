@@ -25,6 +25,7 @@ class TodoList extends React.Component {
                     className='input'
                     value={this.state.inputValue}
                     onChange={this.handleInputChange}
+                    ref={(input)=>{this.input=input}}
                 />
                 <button onClick={this.handleBtnClick}>submit</button>
             </div>
@@ -45,8 +46,8 @@ class TodoList extends React.Component {
         </Fragment>
       )
     }
-    handleInputChange(event){
-        const value = event.target.value;
+    handleInputChange(){
+        const value = this.input.value;
         this.setState(() => ({
             inputValue: value
         }));
@@ -55,7 +56,7 @@ class TodoList extends React.Component {
         this.setState((prevState) => ({
             list:[...prevState.list, prevState.inputValue], //生成新的数组，赋值给component的list
             inputValue: ''
-        }))
+        }));
     }
     handleItemDelete(index){
 
