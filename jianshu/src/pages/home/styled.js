@@ -16,7 +16,7 @@ export const HomeLeft = styled.div`
     }
 `;
 export const HomeRight = styled.div`
-    width:240px;
+    width:280px;
     float:right;
 `;
 
@@ -76,5 +76,48 @@ export const ListInfo = styled.div`
         line-height:24px;
         font-size:13px;
         color:#999
+    }
+`;
+
+//css for recommend
+export const RecommendWrapper = styled.div`
+    margin:30px 0;
+    width:280px;
+`;
+export const RecommendItem = styled.div`
+    margin-top: 5px;
+    width:280px;
+    height:50px;
+    background:url(${(props)=>props.imgUrl});//style-components的语法
+    background-size:contain;
+`;
+
+//css for writer
+export const WriterWrapper = styled.div`
+    width:278px;
+    border:1px solid #dcdcdc;
+    border-radius: 3px;
+    overflow: hidden;
+`;
+export const WriterTitle = styled.div`
+    text-align:left;
+    color:#999;
+    margin:10px;
+    width:100%;
+`;
+export const WriterItem = styled.div`
+    line-height:50px;
+    padding:8px;
+    .writer-pic{
+        float:left;
+        border-radius:50%;
+        height:50px;
+    }
+    .writer-name{
+        padding-left:10px;
+    }
+    .subscribe{
+        color:#5ec850;
+        float:right;
     }
 `;
