@@ -25,7 +25,7 @@ class Home extends Component {
                     <List />
                 </HomeLeft>
                 <HomeRight>
-                    <Recommend />
+                    <Recommend/>
                     <Writer />
                 </HomeRight>
                 <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop>
