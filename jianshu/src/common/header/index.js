@@ -57,7 +57,10 @@ class Header extends Component {
                 <Nav>
                     <NavItem className='left active'>首页</NavItem>
                     <NavItem className='left'>下载App</NavItem>
-                    <NavItem className='right'>登陆</NavItem>
+                    {
+                        this.props.login ? <NavItem className='right'>退出</NavItem> : 
+                        <a href='/login'><NavItem className='right'>登陆</NavItem></a>
+                    }
                     <NavItem className='right'><i className="iconfont">&#xe636;</i></NavItem>
                     <SearchWrapper>
                         <CSSTransition in={this.props.focused} timeout={200} classNames="slide">
@@ -87,7 +90,8 @@ const mapStateToProps = (state) => {
         list:state.getIn(['header','list']),
         page:state.getIn(['header','page']),
         totalPage:state.getIn(['header','totalPage']),
-        mouseIn:state.getIn(['header','mouseIn'])
+        mouseIn:state.getIn(['header','mouseIn']),
+        login:state.getIn(['login','login'])
     }
 }
 const mapDispatchToProps = (dispatch) => {
