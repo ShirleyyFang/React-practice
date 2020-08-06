@@ -60,6 +60,7 @@ export const ListItem = styled.div`
         margin-top:12px;
         float:right;
         border-radius:10px;
+        cursor:pointer;
     }
 `;
 
@@ -77,6 +78,17 @@ export const ListInfo = styled.div`
         font-size:13px;
         color:#999
     }
+`;
+
+export const LoadMore = styled.div`
+    margin:30px 0;
+    width:100%;
+    height:40px;
+    line-height:40px;
+    background:#a5a5a5;
+    text-align:center;
+    border-radius:20px;
+    color:#fff;
 `;
 
 //css for recommend
@@ -121,3 +133,14 @@ export const WriterItem = styled.div`
         float:right;
     }
 `;
+export const BackTop = styled.div`
+    position:fixed;
+    right:100px;
+    bottom:30px;
+    width:60px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    border:1px solid #ccc;
+    font-size:14px;
+`
